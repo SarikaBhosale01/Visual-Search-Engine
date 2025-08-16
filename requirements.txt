@@ -1,0 +1,6 @@
+flask
+tensorflow
+opencv-python
+pillow
+scikit-learn
+numpy

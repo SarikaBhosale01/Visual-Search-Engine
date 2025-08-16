@@ -1,0 +1,9 @@
+<h2>तुमची Search History</h2>
+<ul>
+{% for entry in history %}
+  <li>
+    <img src="{{ url_for('static', filename='uploads/' + entry.image) }}" width="100">
+    <strong>{{ entry.label }}</strong> — {{ entry.time }}
+  </li>
+{% endfor %}
+</ul>

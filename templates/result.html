@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Search Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            text-align: left;
+            padding: 10px 20px;
+            background: #e7f3ff;
+            border-left: 6px solid #2196F3;
+            display: inline-block;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔍 Visual Search Result</h2>
+        <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Image">
+        
+        <div class="result-box">
+            <h3>Top Predictions:</h3>
+            <ul>
+                {% for label, score in result %}
+                    <li><strong>{{ label }}</strong> — {{ (score * 100) | round(2) }}%</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="/" class="button">Try Another Image</a>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>🔎 Detection Result</h1>
+        <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Image">
+        <div class="result-box">
+            <h3>Predictions:</h3>
+            <ul style="text-align: left;">
+                {% for label, score in result %}
+                    <li><strong>{{ label }}</strong> — {{ score }}%</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <br>
+        <a href="/"><button>Try Another</button></a>
+    </div>
+    {% endblock %}
+    <div class="wave"></div>
+    <div class="flower-container">
+  <div class="flower">🌸</div>
+  <div class="flower">🌷</div>
+  <div class="flower">🌼</div>
+  <div class="flower">🌸</div>
+  <div class="flower">🌷</div>
+  <div class="flower">🌼</div>
+</div>
+<div class="heart-container">
+  <div class="heart">❤️</div>
+  <div class="heart">💗</div>
+  <div class="heart">💕</div>
+  <div class="heart">💖</div>
+</div>
+   <footer class="footer">
+    Developed with 💖 by Baby © 2025
+</footer>
+
+    
+</body>
+</html>

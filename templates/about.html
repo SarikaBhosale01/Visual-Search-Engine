@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1>About Visual Search</h1>
+  <p>This app lets you upload a photo and finds what it is — just like:</p>
+  <ul>
+    {% for name, desc in info %}
+      <li><strong>{{ name }}</strong>: {{ desc }}</li>
+    {% endfor %}
+  </ul>
+  <p>These services inspire our design:</p>
+  <ul>
+    <li><strong>Google Lens</strong>: "identifies objects, translates text, and finds similar products" :contentReference[oaicite:2]{index=2}</li>
+    <li><strong>Pinterest Lens</strong>: "visual discovery with shopping integration" :contentReference[oaicite:3]{index=3}</li>
+    <li><strong>CamFind</strong>: "first mobile visual search; 42M+ downloads" :contentReference[oaicite:4]{index=4}</li>
+  </ul>
+</div>
+{% endblock %}

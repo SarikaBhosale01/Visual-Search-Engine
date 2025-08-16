@@ -1,0 +1,26 @@
+{% for i in range(4) %}
+  <div class="heart">{{ ['❤️','💗','💕','💖'][i] }}</div>
+{% endfor %}
+<style>
+  .heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .heart {
+    font-size: 50px;
+    animation: heartbeat 1.5s infinite ease-in-out;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
