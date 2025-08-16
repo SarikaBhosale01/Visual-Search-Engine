@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Search Engine</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #dbeafe, #fef9c3);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 400px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #1e3a8a;
+    }
+
+    input[type="file"] {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px dashed #1e40af;
+      border-radius: 10px;
+      width: 100%;
+      background-color: #f0f9ff;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: none;
+      background-color: #2563eb;
+      color: white;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Visual Search Engine</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <br>
+      <button type="submit">Upload & Search</button>
+    </form>
+  </div>
+
+
+
+  <footer>
+    Developed by Baby © 2025
+  </footer>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Search Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  {% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>🧠 Visual Search Engine</h1>
+        <h2>Upload an image to identify objects</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required><br>
+            <button type="submit">Analyze Image</button>
+        </form>
+    </div>
+    {% endblock %}
+    <div class="flower-container">
+  <div class="flower">🌸</div>
+  <div class="flower">🌷</div>
+  <div class="flower">🌼</div>
+  <div class="flower">🌸</div>
+  <div class="flower">🌷</div>
+  <div class="flower">🌼</div>
+</div>
+<div class="heart-container">
+  <div class="heart">❤️</div>
+  <div class="heart">💗</div>
+  <div class="heart">💕</div>
+  <div class="heart">💖</div>
+</div>
+
+    <div class="wave"></div>
+    <footer class="footer">
+    Developed with 💖 by Baby © 2025
+</footer>
+
+    
+</body>
+</html>
